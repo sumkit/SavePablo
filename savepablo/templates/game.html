@@ -1,0 +1,90 @@
+{% extends 'home.html' %}
+{% block head %}
+
+{% load staticfiles %}
+<script src="{% static 'js/game.js' %}"></script>
+
+{% endblock %}
+{% block alerts %}
+<div id="hold">
+</div>
+{% endblock %}
+{% block alerts2 %}
+<div id="hold2">
+</div>
+{% endblock %}
+{% block thirdcol %}
+<div class="col-md-4 container-fluid" id="store">
+      <h1 class="header"> $ <span id="oMoney"> 0 </span> <small>{{opponent}}</small></h1>
+      <h2 class="header">  <span id="oMps"> 1 </span> <span> <small> $/sec </small> </span> </h2>
+      <h1 class="header"> Debuffs! </h1>
+      <div class="hover row grid">
+        <h3 class="count"> Get caught pirating software</h3>
+        <figure class="box">
+        <img id="pirate" class="debuff" src="{% static 'img/pirate-bay.jpg' %}"/>
+        <figcaption>
+          Stop your opponent from buying items for 20 seconds.
+        </figcaption>
+        </figure>
+        <p class="text">
+            <span>Price: </span>
+            <span id="price">100</span>
+        </p>
+
+      </div>
+      <div class="hover row">
+        <h3 class="count"> Start and fail a clothing line</h3>
+        <figure class="box">
+          <img class="debuff" id="first" src="{% static 'img/pastelle.jpg' %}"/>
+       <figcaption>
+          Lower your opponents money by 20%
+        </figcaption>
+
+        </figure>
+        <p class="text">        
+              <span>Price: </span>
+              <span id="price">1000</span>
+        </p>
+      </div>
+     <div class="hover row">
+        <h3 class="count"> Start and fail a second clothing line</h3>
+        <figure class="box">
+          <img class="debuff" id="second" src="{% static 'img/good.jpg' %}"/>
+       <figcaption>
+          Lower your opponents mps by 20%
+        </figcaption>
+
+        </figure>
+        <p class="text">                                 
+            <span>Price: </span>
+            <span id="price">10000</span>
+        </p>
+      </div>
+      <div class="hover row">
+        <h3 class="count"> Start a third a clothing line, results unknown</h3>
+        <figure class="box">
+          <img class="debuff" id="third" src="{% static 'img/third.jpg' %}"/>
+       <figcaption>
+       Steal 35%  : 80% chance <br> Give 35% : 20% chance.   
+       </figcaption>
+
+        </figure>
+          <p class="text"> 
+             <span>Price: </span>
+             <span id="price">100000</span>
+        </p>
+      </div>
+      <div class="hover row">
+        <h3 class="count"> Hit your head on a stop sign </h3>
+        <figure class="box">
+          <img class="debuff" id="stop" src="{% static 'img/sign.png' %}"/>
+         <figcaption>
+          Prevent all actions by opponent
+          </figcaption>
+        </figure>
+        <p class="text"> 
+           <span>Price: </span>
+           <span id="price">100000</span>
+     </div>
+
+{% endblock %}

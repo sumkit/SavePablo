@@ -1,0 +1,14 @@
+{% extends 'navbar.html' %}
+
+{% block head %}
+
+{% load staticfiles %}
+
+{% endblock %}
+
+{% block content %}
+<h2>Did you realize that you were a champion, {{player}}? In their eyes.</h2>
+<figure class="box">
+<img id="tswift" class="image" src="{% static 'img/tswift.jpg' %}"/>
+</figure>
+{% endblock %}

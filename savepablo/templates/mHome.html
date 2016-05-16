@@ -1,0 +1,52 @@
+{% extends 'navbar.html' %}
+{% block head %}
+
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href={% static 'css/mHome.css' %}>
+<script src="{% static 'js/mHome.js' %}"></script>
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+
+{% endblock %}
+{% block content %}
+
+<p id="inv" style="display: none;">{{invite}}</p>
+
+<div class="outer"> 
+
+
+<div class="middle">
+<blockquote id="quote">
+  <p class="text-center"> My greatest pain in life is that I will never be able to see myself perform live </p>
+  <small class="text-center"> The Great Yeezy</small>
+</blockquote>
+
+    <div class="center">
+
+      <div class='buttons' id="spinner" style="display:none"> 
+        <i class="fa fa-circle-o-notch fa-spin" style="font-size:48px"></i> 
+        <p class="text" id='search'> Searching for game </p>
+        <p class="text" id='wait'> Waiting for accept </p> 
+      </div>
+      <div class="buttons"><button id='cancel' class="btn btn-danger btn-lg" style="display:none">Cancel</button>
+      </div>     
+      <div class="buttons"><button id='cancel2' class="btn btn-danger btn-lg" style="display:none">Cancel</button>
+      </div>
+
+
+
+      <div class="buttons">
+        <button id='game' class="btn btn-primary btn-lg">Find Game</button>
+      </div>
+     <div class="buttons">
+       <button id='invite' class="btn btn-success btn-lg">Invite Friend</button>
+     </div>
+     <div class='bottom'>
+       <p id='share' style="display:none">Share this link with a friend! <span id='link' style="display:none"> </span> </p>
+     </div>
+
+
+  </div>
+  </div>
+</div>
+{% endblock %} 
